@@ -13,5 +13,7 @@ echo 10 > /proc/sys/vm/swappiness
 swapon /swapfile
 echo 1 > /proc/sys/vm/overcommit_memory
 
+NODE_OPTIONS=--max-old-space-size=256
+
 npm prisma:deploy
 npm run start
